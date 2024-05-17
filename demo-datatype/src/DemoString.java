@@ -95,7 +95,7 @@ public class DemoString {
       System.out.println("yes");
     }
     
-    // String Method 4: substring(int neginIndex, int endIndex (endIndex-1))
+    // String Method 4: substring(int beginIndex, int endIndex (endIndex-1))
     String result = x2.substring(0, 2);
     System.out.println(result); //he
     System.out.println(x2.substring(0, 5)); //"hello"
