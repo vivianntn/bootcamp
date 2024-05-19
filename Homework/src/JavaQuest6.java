@@ -8,6 +8,15 @@ public class JavaQuest6 {
   public static void main(String[] args) {
     // Code here ...
     // for loop to print first 15 numbers in Fibonacci Sequence
-
+    int n = 15;
+    int firstTerm = 1;
+    int secondTerm = 1;
+    for (int i = 1; i <= n; i++){
+      System.out.println(firstTerm + " ");
+      int nextTerm = firstTerm + secondTerm;
+      firstTerm = secondTerm;
+      secondTerm = nextTerm;
+    }
+    
   }
 }

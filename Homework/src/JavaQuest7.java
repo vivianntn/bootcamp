@@ -10,6 +10,9 @@ public class JavaQuest7 {
 
     // Write a loop to sum up all value in the int array
     // code here ...
-    System.out.println("The sum is " + sum);
+    for (int i = 0; i < 11; i++) {
+      sum += i;
+    }
+      System.out.println("The sum is " + sum);
   }
 }
