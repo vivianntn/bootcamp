@@ -12,7 +12,7 @@ public class JavaQuest6 {
     int firstTerm = 1;
     int secondTerm = 1;
     for (int i = 1; i <= n; i++){
-      System.out.println(firstTerm + " ");
+      System.out.print(firstTerm + " ");
       int nextTerm = firstTerm + secondTerm;
       firstTerm = secondTerm;
       secondTerm = nextTerm;
