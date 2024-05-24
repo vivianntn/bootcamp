@@ -114,6 +114,7 @@ public class DemoArray {
             //}else{
                 //length = c2.length;
             //}
+            
         int length = c3.length > c4.length ? c3.length : c4.length;
 
         for (int i=0; i<length; i++){

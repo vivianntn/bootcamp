@@ -9,6 +9,7 @@ public class DemoPrimitives2 {
     //int i1 = 4L; // cannot assign long value to int variable, because long is a type higher than int
 
     // byte -> short -> int -> long -> float -> double
+    // char -> int (ascii)
     double d1 = 1.0;
     double d2 = 1.8d;
     double d3 = 10L;
