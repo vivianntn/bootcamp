@@ -92,12 +92,37 @@ public class DemoArray {
         // 4. Given two char[]
         char[] c1 = new char[] {'o', 'a', 'k', 'p'};
         char[] c2 = new char[] {'a', 'b', 'f', 't'};
-        String s1 = "";
-        for (int i = 0; i< (c1.length+c2.length); i++){
-            s1 += (c1[i]+c2[i]);
-        }
-        System.out.println("Result = " + s1);
+                
         // 4a. result = "oakpabft", append all vharacters to a String value
+        String result1 = "";
+        for (int i = 0; i< c1.length; i++){
+            result1 += c1[i];
+        }
+        for (int i = 0; i< c2.length; i++){
+            result1 += c2[i];
+        }
+        System.out.println(result1);
+
         // 4b. result = when even index, get the value from c1, when odd index, get the value from c2
+        String result2 ="";
+        char[] c3 = new char[] {'o', 'a', 'k', 'p', 'a', 'b'};
+        char[] c4 = new char[] {'a', 'b', 'f', 't'};
+        //obkta
+       
+        //if(c1.length > c2.length){
+            //length = c1.length;
+            //}else{
+                //length = c2.length;
+            //}
+        int length = c3.length > c4.length ? c3.length : c4.length;
+
+        for (int i=0; i<length; i++){
+            if(i%2 ==0 && i <c3.length){
+            result2 += c3[i];
+        }else if (i%2 == 1 && i <c4.length) {
+            result2 +=c4[i];
+        }
+    }
+    System.out.println(result2); //obkta
     }
 }

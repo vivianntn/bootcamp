@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class DemoString {
   public static void main(String[] args) {
     // String stores text, must use double quote to declare a string value
@@ -119,5 +121,54 @@ public class DemoString {
     if (x3.charAt(0)=='w' && x3.charAt(1)=='e' && x3.charAt(2)=='l'){
       System.out.println("yes");
     }
+
+    // isEmpty()
+    // Empty String value -> ""
+    String x7 = "";
+    System.out.println(x7.isEmpty()); //true
+    String x8 = "abc";
+    System.out.println(x8.isEmpty()); //false
+    
+    System.out.println(x7.length() == 0);//true
+
+    //isBlank()
+    String x9 = "";
+    System.out.println(x9.isBlank());//true
+    x9 = " ";
+    System.out.println(x9.isBlank());//true -> check whitespace then check length
+    System.out.println(x9.isEmpty());//false -> check length only
+
+    //substring(0,3)
+    //substring(0)
+    String s10 = "hello";
+    System.out.println(s10.substring(0)); //from index 0 to the end -> hello
+    System.out.println(s10.substring(0, 3)); // from index 0 to the index 2 (3-1) -> hel
+
+    //hello -> HELLO
+    System.out.println(s10.toUpperCase()); //"HELLO"
+    String s11 = "Hello";
+    System.out.println(s11.toLowerCase()); // "hello"
+
+    System.out.println(s10.replace('l', 'x')); // hexxo
+    System.out.println(s10.replace("ll", "yyy")); // heyyyo
+
+    //contains()
+    System.out.println(s10.contains("ell")); //true
+
+    //startWith()
+    System.out.println(s10.startsWith("he")); //true
+    //endWith()
+    System.out.println(s10.endsWith("o")); //true
+
+    //trim() -> removing the space characters at the head/tail of the String
+    String s12 = "   Hello,  bootcamp   !!!   ";
+    System.out.println(s12.trim()); //Hello,  bootcamp   !!!
+
+    String[] strings = new String[] {"hello", "abcijk", "vincent", "HeLLo", "   HELLO   "};
+    //how many strings contains "ELL". but ignore case
+    //"eLL" or "ell" or "ELL"....
+    System.out.println(Arrays.toString(strings));
+    
+    
   }
 }
