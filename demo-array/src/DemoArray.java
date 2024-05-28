@@ -114,7 +114,7 @@ public class DemoArray {
             //}else{
                 //length = c2.length;
             //}
-            
+
         int length = c3.length > c4.length ? c3.length : c4.length;
 
         for (int i=0; i<length; i++){
@@ -125,5 +125,75 @@ public class DemoArray {
         }
     }
     System.out.println(result2); //obkta
+
+    //average
+    int[] arr5 = new int[] {4, 8, 3};
+    int sum = 0;
+    int count2 = 0;
+    for (int i=0; i<arr5.length; i++) {
+        sum += arr5[i];
+        count2++;
     }
+    System.out.println(sum / count2);
+
+    //swapping in array
+    int [] arr6 = new int[] {6, 10, -4, 15};
+    //swap -4 and 6 -> {-4, 10, 6, 15}
+    int temp = arr6[2];
+    arr6[2] = arr6[0];
+    arr6[0] = temp;
+    System.out.println(Arrays.toString(arr6)); //{-4, 10, 6, 15}
+
+    //Level 1:
+    //arr6= {-4, 10, 6, 15}
+    //move the 1st element to the tail of the array
+    //output -> {6, 10, 15, -4}
+    int t = 0;
+    for (int i = 0; i<arr6.length - 1; i++) {
+        t = arr6[i];
+        arr6[i] = arr6[i+1];
+        arr6[i+1] = t;
+    }
+    System.out.println(Arrays.toString(arr6)); //[10, 6, 15, -4]
+
+    //Level 2:
+    //Move the max element to the tail
+    //New: [10, 6, 15, -4]
+    //Result: [10, 6, -4, 15]
+    for (int i = 0; i< arr6.length - 1; i++) {
+        if (arr6[i]> arr6[i+1]){
+            //swap
+            t = arr6[i];
+            arr6[i] = arr6[i+1];
+            arr6[i+1] = t;
+        }
+    }
+    System.out.println(Arrays.toString(arr6));
+
+
+
+    //Level 3:
+    //Sorting -> {-4, 6, 10, 15}
+    //for loop
+    //nested loop
+    
+
+    //Swap char value
+    String str = "hello"; //swap 'e' and 'o' -> "holle"
+    //convert char[]
+    //for loop + charAt[]
+    //char[] arr7 = new char[str.length()];
+    char t2 = ' ';
+    //for (int i = 0; i < str.length(); i++){
+    //    arr7[i] = str.charAt(i);
+    //  }
+    //Alternative (String -> char[])
+    char[] arr7 = str.toCharArray(); //['h', 'e', 'l', 'l', 'o']
+    
+    t2 = arr7[1];
+    arr7[1] = arr7[4];
+    arr7[4] = t2;
+    str = String.valueOf(arr7); // assign a new String value to variable s
+    System.out.println(str); //holle
+  }
 }

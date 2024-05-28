@@ -13,5 +13,6 @@ public class JavaQuest8 {
     // Your program should be able to handle all the above test case.
     int secondMax;
     // code here ...
+    
   }
 }

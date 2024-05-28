@@ -17,6 +17,10 @@ public class DemoMethod {
 
     System.out.println(isSubstring("hello", "ll")); //true
     System.out.println(isSubstring("hello", "lll")); //false
+
+    //circle Area
+    System.out.println(circleArea(3)); //28.274333882308138
+
   }
 
   public static int sum(int x, int y) {
@@ -91,7 +95,7 @@ public class DemoMethod {
   }
 
   // Java -> PI
-  public static double circleArea(int redius) {
-
+  public static double circleArea(int radius) {
+    return radius * radius * Math.PI; //int * int * double -> double 
   }
 }
