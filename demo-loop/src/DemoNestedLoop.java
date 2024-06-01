@@ -61,5 +61,53 @@ public class DemoNestedLoop {
       }
     }
     System.out.println(idx); //14
+
+    //*****
+    for (int i=0; i<5; i++) {
+      System.out.print("*");
+    }
+    System.out.println();
+
+    //***** 
+    //***** 
+    //***** 
+    //***** 
+    //***** 
+    //tips
+    //1. new line
+    //2. Nested Loop
+    for (int row=0; row < 5; row++) {
+      for (int column=0; column<5; column++){
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+
+    //*****
+    //****
+    //***
+    //**
+    //*
+    for (int i = 0; i < 5; i++){
+      for (int j = 0; j < 5 - i; j++){
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+
+    //*
+    //**
+    //***
+    //****
+    //***
+    //**
+    //*
+    for (int i = 0; i < 4; i++){
+      for (int j = 0; j < 4 - i && ; j++){
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+
   }
 }

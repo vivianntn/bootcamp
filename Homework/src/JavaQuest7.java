@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * The sum is 55
  */
@@ -11,6 +13,11 @@ public class JavaQuest7 {
     // Write a loop to sum up all value in the int array
     // code here ...
     int [] arr = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int[] newArr = new int[10];
+    for(int i = 0 ; i < 10 ; i++){
+      newArr[i]=i+1;
+    }
+    System.out.println(Arrays.toString(newArr));
     for (int i = 0; i< arr.length + 1; i++) {
       sum += i;
     }

@@ -147,7 +147,7 @@ public class DemoArray {
     //Level 1:
     //arr6= {-4, 10, 6, 15}
     //move the 1st element to the tail of the array
-    //output -> {6, 10, 15, -4}
+    //output -> {10, 6, 15, -4}
     int t = 0;
     for (int i = 0; i<arr6.length - 1; i++) {
         t = arr6[i];
@@ -159,7 +159,7 @@ public class DemoArray {
     //Level 2:
     //Move the max element to the tail
     //New: [10, 6, 15, -4]
-    //Result: [10, 6, -4, 15]
+    //Result: [6, 10, -4, 15]
     for (int i = 0; i< arr6.length - 1; i++) {
         if (arr6[i]> arr6[i+1]){
             //swap
@@ -168,15 +168,38 @@ public class DemoArray {
             arr6[i+1] = t;
         }
     }
-    System.out.println(Arrays.toString(arr6));
+    System.out.println(Arrays.toString(arr6)); //[6, 10, -4, 15]
 
 
 
     //Level 3:
     //Sorting -> {-4, 6, 10, 15}
+    //Bubble sort
     //for loop
     //nested loop
-    
+    //official way:
+    //for (int i = 0; i < arr6.length - i; i++){ //round
+        //for (int j = 0; j < arr6.length - i - 1; j++){ //moving
+            //if (arr6[j] > arr6[j+1]){
+                //t = arr6[j];
+                //arr6[j] = arr6[j+1];
+                //arr6[j+1] = t;
+            //}
+        //}
+    //}
+    //System.out.println(Arrays.toString(arr6)); //[-4, 6, 10, 15]
+
+    //my way:
+    for (int i = 0; i< arr6.length - 1; i++){
+        for (int j = 0; j< arr6.length - 2; j++){
+            if (arr6[j]> arr6[i+1]){
+                t = arr6[j];
+                arr6[j] = arr6[i+1];
+                arr6[i+1] = t;
+        }
+    }
+}
+System.out.println(Arrays.toString(arr6)); //[-4, 6, 10, 15]
 
     //Swap char value
     String str = "hello"; //swap 'e' and 'o' -> "holle"

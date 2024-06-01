@@ -165,10 +165,49 @@ public class DemoString {
     System.out.println(s12.trim()); //Hello,  bootcamp   !!!
 
     String[] strings = new String[] {"hello", "abcijk", "vincent", "HeLLo", "   HELLO   "};
+    System.out.println(Arrays.toString(strings));
     //how many strings contains "ELL". but ignore case
     //"eLL" or "ell" or "ELL"....
-    System.out.println(Arrays.toString(strings));
+    //toUpperCase(), contains()
+    int count = 0;
+    for (int i = 0; i < strings.length; i++) {
+      if (strings[i].toUpperCase().contains("ELL")) {
+        count++;
+      }
+    }
+    System.out.println(count);
+
+    //equalsIgnoreCase()
+    for (int i = 0; i< strings.length; i++) {
+      if (strings[i].equalsIgnoreCase("hello")) {
+        System.out.println(strings[i]);
+      }
+    }
     
-    
+    String s13 = "helloll";
+    System.out.println(s13.indexOf("ll")); //2, the first pattern
+    System.out.println(s13.indexOf('e')); //1
+    System.out.println(s13.indexOf('l')); //2, first character of 'l'
+    System.out.println(s13.indexOf("ll", 4)); //5
+    System.out.println(s13.indexOf("ll", 6)); //-1
+    System.out.println(s13.indexOf(101)); //1, in ascii 'e' -> 101
+
+    System.out.println(s13.lastIndexOf("ll")); //5, the last occurance of the pattern
+    System.out.println(s13.lastIndexOf('e')); //1
+
+    String s14 = "abc";
+    s14 += "def";
+    System.out.println(s14); //abcdef
+
+    String s15 = "abc";
+    s15 = s15.concat("def"); //better performance, faster
+    System.out.println(s15); // abcdef
+
+    String s16 = "abc";
+    String s17 = "abc";
+    System.out.println(s16.compareTo(s17)); //0, the value of s14 = the value of s15
+    System.out.println(s16.equals(s17)); //true
+    System.out.println(s16 == s17); //true ??!! comparing the string object address
+
   }
 }
