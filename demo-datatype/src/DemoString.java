@@ -84,7 +84,7 @@ public class DemoString {
     // 1 means the 2nd character
     // 4 means th 5th character
     System.out.println("The 1st character of s3=" +s3.charAt(0)); //w
-    System.out.println("The 1st character of s3=" +s3.charAt(4)); //d
+    System.out.println("The last character of s3=" +s3.charAt(4)); //d
 
     System.out.println("The last character of s3=" +s3.charAt(s3.length() - 1));
 

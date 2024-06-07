@@ -6,6 +6,9 @@ public class Cat { // Class Name -> Name Convention -> able to describe physical
   private String name;
   private int age;
 
+  //if NO constructor is defined,
+  //by default the class implicitly has an empty constructor
+
   //behavior
   //instance method
   //setAge() is a method that can be called by object only
