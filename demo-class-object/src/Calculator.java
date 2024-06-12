@@ -84,6 +84,21 @@ public class Calculator {
     Calculator.test(new String[] {"abc", "ijk"});
     Calculator.test2(new String[]{"abc", "ijk"});
     Calculator.test2("abc", "ijk");
+
+    //static
+    Calculator.sum(3, 2);//static method
+    Calculator x = new Calculator();
+    x.setX(3);//instance method
+    x.setY(2);//instance method
+    System.out.println(x.sum());//5
+
+    System.out.println(x.sum(3, 2));//call static method
+    //object reerence is able to call static method
+
+    // Calculator.sum(); //Instance method cannot be called by Class Name
+    //Static method can be called by instance (object) or Class Name
+    //Instance method can be called by intance (object) ONLY
+
   }
   
 }
