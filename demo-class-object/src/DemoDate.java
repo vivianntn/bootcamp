@@ -5,7 +5,7 @@ public class DemoDate {
     public static void main(String[] args){
         // 17 types (8 primitives + 8 wrapper classes + String)
         // similar to valueOf
-        LocalDate ld = LocalDate.of(2022, 12, 31);
+        LocalDate ld = LocalDate.of(2024, 8, 5);
         System.out.println(ld); // 2022-12-31
 
         //LocalDate ld2 = LocalDate.of(2022, 12, 32); // java.time.DateTimeException
@@ -26,5 +26,6 @@ public class DemoDate {
         System.out.println(ld.getDayOfYear()); //365
         System.out.println(ld.getDayOfWeek()); //SATURDAY
 
+        System.out.println(ld.plusWeeks(14L)); //2024-11-11
     }
 }

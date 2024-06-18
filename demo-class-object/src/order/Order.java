@@ -12,7 +12,7 @@ public class Order {
 
   public Order(String coupon) {
     this.id = ++count;
-    this.item = new Item[0];
+    this.items = new Item[0];
   }
 
   public int getId(){
@@ -21,6 +21,16 @@ public class Order {
 
   public Item[] getItems(){
     return this.items;
+  }
+
+  public double getDiscount(){
+    if (isCouponValid())
+    return 0.2d;
+    return 0.0d;
+  }
+
+  public boolean isCouponValid(){
+    return true;
   }
 
   public void addItem(Item item){
@@ -36,10 +46,10 @@ public class Order {
 
   public double total(){
     BigDecimal amount = BigDecimal.valueOf(0L);
-    for (int i = 0; i < this.item.length; i++){
-      amount = amount.add(BigDecimal.valueOf(this.item[i].subtotal()));
+    for (int i = 0; i < this.items.length; i++){
+      amount = amount.add(BigDecimal.valueOf(this.items[i].subtotal()));
     }
-    amount  = amount.multiply(BigDecimal.valueOf(1.0 = getDiscount()));
+    amount  = amount.multiply(BigDecimal.valueOf(1.0 - getDiscount()));
     return amount.doubleValue();
   }
 
