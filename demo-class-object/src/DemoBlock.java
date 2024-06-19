@@ -42,7 +42,10 @@ public class DemoBlock {
     DemoBlock db = new DemoBlock();
     DemoBlock db2 = new DemoBlock("vi");
     DemoBlock db3 = new DemoBlock();
+    DemoBlock db4 = new DemoBlock("vi");
     System.out.println(DemoBlock.number);
     System.out.println("end");
+    System.out.println("vi".equals(db2));
+    System.out.println(db2 == db4);
   }
 }

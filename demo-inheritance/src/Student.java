@@ -22,6 +22,11 @@
     return this.studentId;
   }
 
+  public void setAge(int age){
+    //2. call parent ibject setAge()
+    super.setAge(age);
+    }
+
   //public int getAge(){
     //return this.age;
   //}

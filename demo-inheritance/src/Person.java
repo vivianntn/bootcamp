@@ -1,4 +1,4 @@
-public class Person {
+public abstract class Person {
   private String name;
   private int age;
 
@@ -15,8 +15,12 @@ public class Person {
     return this.age;
   }
 
+  public void setAge(int age){
+    }
+
   public static void main(String[] args) {
-    Person p = new Person("Vi", 12);
+    //abstract class CANNOT create object, 抽象class not reality
+    //Person p = new Person("Vi", 12);
 
     //student.class is public
     //student.class constructor is public
