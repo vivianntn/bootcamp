@@ -30,7 +30,7 @@ public abstract class Shape {
 
     //extra example (BigDecimal vs StringBuilder design difference)
     StringBuilder sb = new StringBuilder("hello");
-    sb.append("world");
+    sb.append("world"); 
     //sb = sb.append("world"); //???
     System.out.println(sb); //helloworld
   }
