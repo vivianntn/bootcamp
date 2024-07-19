@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class App {
+public class ArrayListDemo {
     public static void main(String[] args) throws Exception {
         Integer[] integers = new Integer[] {2, 10, -4};
         // for-each
@@ -71,6 +71,20 @@ public class App {
         strings.add("hello"); // add "hello" -> ["hello", "world", "hello"]
         strings.remove("hello"); // remove the first "hello" -> ["world", "hello"]
         System.out.println(strings);
+
+
+        //Question: Given Customer[], retrieve all customer object with age > 30 or name startsWith "J"
+        Customer[] customers = new Customer[] {new Customer(40, "Mary") //
+        , new Customer(31, "John") //
+        , new Customer(29, "Jason")
+        , new Customer(29, "Cindy")};
+        ArrayList<Customer> customersList = new ArrayList<>();
+        for (Customer c : customers){
+            if (c.getAge()>30 || c.getName() != null && c.getName().startsWith("J")){
+                customersList.add(c);
+            }
+            System.out.println(customersList);
+        }
 
     }
 }

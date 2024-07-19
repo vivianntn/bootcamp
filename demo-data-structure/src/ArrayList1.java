@@ -57,6 +57,9 @@ public class ArrayList1 {
     list.add(100);
     System.out.println(list); // [10, 2, -4, 100]
 
+    //list.remove(1);
+    //System.out.println(list);
+
     
   }
 }
