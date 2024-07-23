@@ -24,7 +24,7 @@ public class HashMapDemo {
 
     // For LOOP -> HashMap.class
     // Loop for entries
-    for (Map.Entry<Integer, String> entry : nameMap.entrySet()){
+    for (Map.Entry<Integer, String> entry : nameMap.entrySet()){ // ***important
       System.out.println("key=" + entry.getKey() + ", value=" + entry.getValue());
     }
 
@@ -45,6 +45,22 @@ public class HashMapDemo {
     System.out.println(nameMap); //{null=Oscar, 100=Vicent, -45=null}
     System.out.println(oldValue); //Peter
 
+    System.out.println(nameMap.containsKey(-45)); //true
+
+    // Loop keyset()
+    for (Integer x : nameMap.keySet()){
+      System.out.println(x); // Oscar Vincent
+    }
+
+    // Loop value()
+    for (String x : nameMap.values()){
+      System.out.println(x); // null
+    }
+
+    System.out.println(nameMap.size()); // 3
     
+    System.out.println(nameMap.containsValue("Oscar")); // true
+    System.out.println(nameMap.containsValue("Peter")); // false
+
   }
 }
