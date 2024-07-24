@@ -91,6 +91,20 @@ public class ArrayListDemo {
         objects.add("abc");
         objects.add(1);
         objects.add(LocalDate.of(2024, 5, 22));
+
+        //Polymorphism part 2: runtime -> implememtation
+        for (Object obj : objects){
+            if (obj.equals(new String("abc"))){ // string object equals()
+                System.out.println("hello");
+            } else if (obj.equals(new HKID("A1234567"))){ // hkid object equals()
+                System.out.println("hello2");
+            }else if (obj.equals(new Integer(1))){ // integer object equals()
+                System.out.println("hello3");
+            }else if (obj.equals(LocalDate.of(2024, 5, 22))){ // LocalDate.of equals()
+            System.out.println("hello4");
+            }
+        }
+
         //print
         //check if the object equals to xxx...
         //compare the difference between ArrayList<Object> and ArrayList<String>
