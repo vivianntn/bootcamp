@@ -36,7 +36,7 @@ public abstract class Shape {
   }
 
   public static void main(String[] args) {
-    //Circle vd Shape -> Parent
+    //Circle vs Shape -> Parent
     // List<Shape> vs List<Circle> -> NOT Paren
     List<Shape> shapes = new LinkedList<>();
     shapes.add(new Circle(3.0));

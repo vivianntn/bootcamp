@@ -27,7 +27,10 @@ public class Ball implements Comparable<Ball>{
     // Example 1: sort by number (descending)
     // You have 2 ball obkect reference here: ball and this
     // -1 means "move to left" (from left to right)
-    return this.number > ball.getNumber() ? -1 : 1;
+    if (ball != null && this.number > ball.getNumber())
+      return -1;
+    return 1;
+    //return this.number > ball.getNumber() ? -1 : 1;
   }
 
   @Override
